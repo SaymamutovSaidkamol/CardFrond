@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container, .scelaton {
+  margin-top: 50px;
+  width: 1500px;
+  /* border: 1px solid black; */
+}
+
+/* ------------------------------------------------------------------- */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.buttons .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  gap: 50px;
+}
+
+.buttons button {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #cfcccc;
+}
+.buttons button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------------------- */
+
+.container .wrapper, .scelaton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wrapper .card, .scelaton__card {
+  width: 350px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  background: #eee;
+  border-radius: 15px;
+  box-shadow: -7px 13px 32px 5px rgba(34, 60, 80, 0.35);
+  transition: all 0.3s ease;
+}
+
+.wrapper .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+.card .card__image, .scelaton__image {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.scelaton__image{
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+
+.scelaton_card__body{
+  width: 80%;
+  height: 22px;
+  background: #ddd;
+  margin-top: 12px;
+  margin-left: 5px;
+  border-radius: 8px;
+}
+
+.scelaton__lines {
+  display: flex;
+  width: 80%;
+  height: 22px;
+  background: none;
+  margin-top: 12px;
+  margin-left: 5px;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.scelaton__line {
+  flex: 1;
+  background: #ccc;
+  border-radius: 8px;
+}
+
+.scelaton_card__body:last-child{
+  width: 60%;
+}
+
+.scelaton__animation{
+  background: linear-gradient(90deg, #eee, #c2c1c1, #eee);
+  background-size: 200%;
+  animation: skelaton 1s linear infinite;
+}
+
+@keyframes skelaton{
+  to{
+      background-position: 200%;
+  }
+}
+
+.scelaton__line:last-child {
+  margin-left: 100px; 
+}
+
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card .card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card .card__body h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card .card__body h3 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+
+.card .card__body h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.card .card__body h3 strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.card .card__body h3 span {
+  color: #444;
+  margin-left: 5px;
+}
+
+
+.card .tags__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px;
+  margin-top: auto;
+
+}
+
+.card .tags__card button {
+  width: 50%;
+  height: 30px;
+  border: none;
+  background: #bebcbc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+#modalContent h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#modalContent p {
+  margin: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+#modalContent p strong {
+  color: #000;
+  font-weight: 600;
+}
+
+#modalContent p span {
+  color: #444;
+  margin-left: 5px;
+}
