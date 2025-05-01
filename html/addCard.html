@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/addCard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    
+
+    <div class="container buttons">
+      <div class="btns">
+        <button class="page"><a href="./index.html">Recipes card</a></button>
+        <button class="page"><a href="./user.html">User card</a></button>
+        <button class="AddUser">+New card</button>
+      </div>
+    </div>
+
+    <div class="scelaton">
+        <div class="scelaton__card">
+            <div class="scelaton__image scelaton__animation"></div>
+            <div class="scelaton_card__body scelaton__animation"></div>
+            <div class="scelaton_card__body scelaton__animation"></div>
+            <div class="scelaton_card__body scelaton__animation"></div>
+            <div class="scelaton_card__body scelaton__animation"></div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="wrapper">
+      </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <span class="modal-close" id="closeModalBtn">&times;</span>
+        <div id="modalContent">
+          <input required type="text" placeholder="Enter name..." />
+          <input required type="number" placeholder="Enter count..." />
+          <input required type="number" placeholder="Enter price..." />
+          <input required type="text" placeholder="Enter color..." />
+          <button class="create">Create</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="../js/addCard.js"></script>
+  </body>
+</html>
